@@ -1,0 +1,41 @@
+﻿@model CEDtask1.Models.Product
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Product Details</h2>
+<br />
+<div>
+
+            <p><strong>Product Id   : </strong>@Model.Id</p>
+            <p><strong>Name         :</strong> @Model.Product_Name</p>
+            <p><strong>Price        :</strong> @Model.Price</p>
+            <p><strong>Decription   :</strong> @Model.Decription</p>
+            <p><strong>Product Type :</strong> @Model.ProductType</p>
+            <p><strong>Available    : </strong>@Model.isActive</p>
+    <br />
+            <p>
+                <div>
+
+                    <a href="~/Product/Update/@Model.Id" class="btn btn-primary a-btn-slide-text">
+                        <span class="glyphicon glyphicon-edit"></span>
+                        <span><strong>Edit</strong></span>
+                    </a>
+
+                    <a href="~/Product/Delete/@Model.Id" class="btn btn-primary a-btn-slide-text">
+                        <span class="glyphicon glyphicon-edit"></span>
+                        <span><strong>Delete</strong></span>
+                    </a>
+
+                    <a href="~/Product/List" class="btn btn-primary a-btn-slide-text">
+                        <span class="glyphicon glyphicon-edit"></span>
+                        <span><strong>Back</strong></span>
+                    </a>
+                               
+                </div>
+            </p>
+
+    
+</div>
+
+

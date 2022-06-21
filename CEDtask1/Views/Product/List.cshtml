@@ -1,0 +1,34 @@
+﻿@model List<CEDtask1.Models.Product>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Product List</h2>
+    <br />
+    <a href="~/Product/ProductAdd" class="btn btn-primary">Add Product</a>
+    <br />
+    <table class="table table-responsive">
+        <tr>
+            <th>Product Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>isActive</th>
+           
+       
+        </tr>
+     
+        @foreach (var x in Model)
+        {
+    <tr>
+        <td>@x.Id</td>
+        <td><p> <a href="~/Product/Details/@x.Id" style="color:blue">@x.Product_Name</a></p></td>
+        <td>@x.Price</td>
+        <td>
+            <div class="checkbox">@x.isActive</div>
+        </td>
+    
+
+    </tr>
+        }
+    </table>
+  
